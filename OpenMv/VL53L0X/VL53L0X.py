@@ -41,13 +41,13 @@ class VL53L0X(object):
     def _registers(self, register, values=None, struct='B'):
         if values is None:
             size = ustruct.calcsize(struct)
-#            data = self.i2c.mem_read(size, self.address, register)      #pyb.I2C
-            data = self.i2c.readfrom_mem(self.address, register, size) #machine.SoftI2C
+            data = self.i2c.mem_read(size, self.address, register)      #pyb.I2C
+#            data = self.i2c.readfrom_mem(self.address, register, size) #machine.SoftI2C
             values = ustruct.unpack(struct, data)
             return values
         data = ustruct.pack(struct, *values)
-#        self.i2c.mem_write(data, self.address, register)   #pyb.I2C
-        self.i2c.writeto_mem(self.address, register, data) #machine.SoftI2C
+        self.i2c.mem_write(data, self.address, register)   #pyb.I2C
+#        self.i2c.writeto_mem(self.address, register, data) #machine.SoftI2C
 #---------------------------------------------------------------------
 
     def _register(self, register, value=None, struct='B'):
