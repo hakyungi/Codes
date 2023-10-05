@@ -18,13 +18,11 @@ class HCSR04:
         pulse_end = 0
         pulse_dur = 0
 
-        self.trig.value(0)
-        pyb.udelay(5)
         self.trig.value(1)
         pyb.udelay(10)
         self.trig.value(0)
 
-        limit=20000 #this is to prevent lag
+        limit=20000 #측정 제한시간
         timer= pyb.micros()
         while self.echo.value() == 0 and timer+limit>pyb.micros():
             pulse_start = pyb.micros()
@@ -34,7 +32,11 @@ class HCSR04:
             pulse_end = pyb.elapsed_micros(pulse_start)
 
         pulse_dur = float(pulse_end)
-        distance = (pulse_dur) / 59 #Here you can calibrate the sensor
-        if distance>255:            #max distance 255, if want higher aslo modify the limit variable
+        distance = (pulse_dur) / 58.88  #340m/s , 58.88us / 2cm(거리 1cm)
+        if distance>255:                #최대 측정거리 255cm (1Byte size)
             distance=255
+
+        while timer+limit > pyb.micros():
+            pass
+
         return int(distance)
