@@ -22,8 +22,6 @@ I2C_J9 = SoftI2C(scl = 'P7', sda = 'P8', freq = 400000, timeout=50000) #Soft I2C
 #I2C_J8 = I2C(2, I2C.MASTER, baudrate = 400000)    #Hardware I2C
 #I2C_J9 = I2C(4, I2C.MASTER, baudrate = 400000)    #Hardware I2C
 #---------------------------------------------------------------------
-# Software I2C 채널
-#---------------------------------------------------------------------
 
 TOF = VL53L0X(I2C_J9)
 
