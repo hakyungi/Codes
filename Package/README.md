@@ -8,10 +8,10 @@ I/F 보드와 EV3 또는 SPike Prime과 연결한 예입니다.
 
 USB 연결만으로는 동작이 안되며 EV3 또는 Spike Prime에 연결하여 전원이 공급되어야 작동 가능합니다. 
 
-TIMEOUT, ENODEV 간은 에러가 뜨면
+TIMEOUT, ENODEV 같은 에러가 뜨면
 
     - 전원이 연결되지 않았거나 
-    
+
     - 전선이 잘못 연결되었거나 
     
     - 커넥터 접촉이 안좋거나 
@@ -27,8 +27,11 @@ EV3 : https://youtu.be/USE37TX5gu8?si=YUAwIl3PE65uqGaZ
 Spike Prime : https://youtube.com/shorts/MC_HzxJB1lU?si=tBtv8v40VfLhSl6N 
 
 전류는 아래와 같이 소모되며 OpenMV H7 + TOF 3개 + IMU 시 약 240mA 소모됨.
+
     - OpenMV H7 : 약 175mA @ 5V
+    
     - TOF : 약 20mA @ 5V
+    
     - IMU : 약 10mA @ 5V
 
 EV3는 모든 포트에 공급되는 전류의 총합이 350mA이며 최대 1A에서 전원을 차단합니다. 
