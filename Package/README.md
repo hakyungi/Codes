@@ -7,7 +7,9 @@ I2C 주소만 틀리다면 선을 병렬로 연결하여 센서 추가가 가능
 I/F 보드와 EV3 또는 SPike Prime과 연결한 예입니다.
 
 동영상 참조.
+
 EV3 : https://youtu.be/USE37TX5gu8?si=YUAwIl3PE65uqGaZ
+
 Spike Prime : https://youtube.com/shorts/MC_HzxJB1lU?si=tBtv8v40VfLhSl6N
 
 PDF 문서를 참조하세요.
