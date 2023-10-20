@@ -41,7 +41,14 @@ PacketIndex = 0
 ObjectIndex = 0
 
 rcvPACKET = bytearray([])
+<<<<<<< HEAD
 Object = list([])
+=======
+DATA = list([])
+ultra1 = 255
+ultra2 = 255
+ultra3 =255
+>>>>>>> b286db924b08b33b1e87404fbb41a1061905d0bb
 ObjectCount = 0
 
 def _parsing(_data) -> tuple([uInt16, uInt16, uInt16, uInt16, uInt16]):
@@ -52,7 +59,12 @@ def readPacket() -> bool:
     global PacketIndex
     global ObjectIndex
     global rcvPACKET
+<<<<<<< HEAD
     global ObjectCount
+=======
+    global DATA
+    global ultra1, ultra2, ultra3, ObjectCount
+>>>>>>> b286db924b08b33b1e87404fbb41a1061905d0bb
     
     read = False
 
@@ -103,6 +115,13 @@ def readPacket() -> bool:
                 print("CHECK SUM ERROR")
                 return False
 
+<<<<<<< HEAD
+=======
+            DATA = list([])
+            for n in range(ObjectCount):
+                DATA.append(_parsing(rcvPACKET[n*10+7:n*10+17]))
+
+>>>>>>> b286db924b08b33b1e87404fbb41a1061905d0bb
             return True
     return False
             
@@ -116,6 +135,10 @@ ser = UARTDevice(Port.S3, 115200)
 ser.clear()
 wait(100)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b286db924b08b33b1e87404fbb41a1061905d0bb
 while True:
     read = True
     if ser.waiting() >= 5:  # 수신 데이터가 있으면 (최소 사이즈는 5 바이트임)
