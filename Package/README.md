@@ -23,8 +23,10 @@ TIMEOUT, ENODEV 간은 에러가 뜨면
 테스트 후 이상이 없을 경우 커넥터 부위를 글루건으로 고정하시길 추천드립니다. 
 
 동영상 참조 
-EV3 : https://youtu.be/USE37TX5gu8?si=YUAwIl3PE65uqGaZ 
-Spike Prime : https://youtube.com/shorts/MC_HzxJB1lU?si=tBtv8v40VfLhSl6N 
+
+    EV3 : https://youtu.be/USE37TX5gu8?si=YUAwIl3PE65uqGaZ 
+    
+    Spike Prime : https://youtube.com/shorts/MC_HzxJB1lU?si=tBtv8v40VfLhSl6N 
 
 전류는 아래와 같이 소모되며 OpenMV H7 + TOF 3개 + IMU 시 약 240mA 소모됨.
     - OpenMV H7 : 약 175mA @ 5V
