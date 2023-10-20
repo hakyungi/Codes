@@ -29,8 +29,13 @@ class MLX90614:
 # I2C의 타잎(pyb.I2C, macine.SoftI2C)에 따라서 아래 내용을 수정해 줘야 함.
 #---------------------------------------------------------------------
   def getReg(self,register): #센서에서 DATA 읽기
+<<<<<<< HEAD:Package/OpenMV/MLX90614.py
 #    data = self.i2c.mem_read(3, self.address, register)    #pyb.I2C
     data = self.i2c.readfrom_mem(self.address, register, 3) #machine.SoftI2C
+=======
+    data = self.i2c.mem_read(3, self.address, register)    #pyb.I2C
+#   data = self.i2c.readfrom_mem(self.address, register, 3) #machine.SoftI2C
+>>>>>>> b286db924b08b33b1e87404fbb41a1061905d0bb:OpenMv/MLX90614/MLX90614.py
 #---------------------------------------------------------------------
 
     result = (data[1]<<8) | data[0]
