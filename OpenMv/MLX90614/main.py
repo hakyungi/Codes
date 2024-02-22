@@ -1,7 +1,7 @@
 # Untitled - By: JEON - 금 9 22 2023
 
 import time
-from machine import I2C as SOFTI2C
+from machine import I2C as SoftI2C
 from pyb import I2C
 
 from MLX90614 import MLX90614
@@ -16,21 +16,21 @@ print ("온도센서")
 #---------------------------------------------------------------------
 # Software I2C 채널
 #---------------------------------------------------------------------
-#I2C_J7 = SoftI2C(scl = 'P2', sda = 'P3', freq = 100000, timeout=50000) #Soft I2C
-#I2C_J9 = SoftI2C(scl = 'P7', sda = 'P8', freq = 100000, timeout=50000) #Soft I2C
+I2C_J7 = SoftI2C(scl = 'P2', sda = 'P3', freq = 100000, timeout=50000) #Soft I2C
+I2C_J9 = SoftI2C(scl = 'P7', sda = 'P8', freq = 100000, timeout=50000) #Soft I2C
 #---------------------------------------------------------------------
-#I2C_J8 = SoftI2C(scl = 'P4', sda = 'P5', freq = 100000, timeout=50000) #Soft I2C
+I2C_J8 = SoftI2C(scl = 'P4', sda = 'P5', freq = 100000, timeout=50000) #Soft I2C
 #---------------------------------------------------------------------
 
 #---------------------------------------------------------------------
 # Hardware I2C 채널
 #---------------------------------------------------------------------
 #I2C_J8 = I2C(2, I2C.MASTER, baudrate = 100000)    #Hardware I2C
-I2C_J9 = I2C(4, I2C.MASTER, baudrate = 100000)    #Hardware I2C
+#I2C_J9 = I2C(4, I2C.MASTER, baudrate = 100000)    #Hardware I2C
 #---------------------------------------------------------------------
 
 
-GY906 = MLX90614(I2C_J9)
+GY906 = MLX90614(I2C_J7)
 
 clock = time.clock()
 clock.tick()
