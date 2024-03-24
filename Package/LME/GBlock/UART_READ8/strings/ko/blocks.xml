@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorStrings>
+  <PolyGroups ModuleName="UART_READ8">
+	<PolyGroup Name="UART_READ8" DisplayName="여덟 개의 정수형 데이터 읽기" DisplayNamePrefix="UART_READ8">
+      <Parameter Name="Port" DisplayName="Port" ></Parameter>
+      <Parameter Name="DATA1" DisplayName="첫 번째 데이터"></Parameter>
+      <Parameter Name="DATA2" DisplayName="두 번째 데이터"></Parameter>
+      <Parameter Name="DATA3" DisplayName="세 번째 데이터"></Parameter>
+      <Parameter Name="DATA4" DisplayName="네 번째 데이터"></Parameter>
+      <Parameter Name="DATA5" DisplayName="다섯 번째 데이터"></Parameter>
+      <Parameter Name="DATA6" DisplayName="여섯 번째 데이터"></Parameter>
+      <Parameter Name="DATA7" DisplayName="일곱 번째 데이터"></Parameter>
+      <Parameter Name="DATA8" DisplayName="여덟 번째 데이터"></Parameter>
+	  <Block Mode="UART_READ8" DisplayName="여덟 개의 정수형 데이터 읽기"></Block>
+    </PolyGroup>
+  </PolyGroups>
+</EditorStrings>
